@@ -1,3 +1,18 @@
+const load = document.getElementById("load");
+const more = document.getElementById("more");
+const chnge = document.getElementById("chng");
+
+load.onclick = function (){
+    if(more.classList.contains("hidden")){
+        more.classList.remove("hidden");
+        chnge.innerHTML = "<span>less</span>";
+    }
+    else{
+        more.classList.add("hidden");
+        chnge.innerHTML = "<span>more</span>";
+    }
+};
+
 const icon = document.getElementById("icon");
 const menu = document.getElementById("menu");
 
@@ -24,3 +39,18 @@ show.addEventListener('click', () => {
         change.innerHTML = "<span>Show</span>";
     }
 });
+
+const html = document.querySelector("html");
+const dark = document.querySelector("#dark");
+const switcher = document.querySelector("#switch");
+
+dark.onclick = function (){
+    if(html.classList.contains("dark")){
+        html.classList.remove("dark");
+        switcher.innerHTML = "<span>light</span>";
+    }
+    else{
+        html.classList.add("dark");
+        switcher.innerHTML = "<span>Dark</span>";
+    }
+};
