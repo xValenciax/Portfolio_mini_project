@@ -40,7 +40,7 @@ show.addEventListener('click', () => {
     }
 });
 
-const html = document.querySelector("html");
+const html = document.documentElement;
 const dark = document.querySelector("#dark");
 const switcher = document.querySelector("#switch");
 
@@ -48,9 +48,11 @@ dark.onclick = function (){
     if(html.classList.contains("dark")){
         html.classList.remove("dark");
         switcher.innerHTML = "<span>light</span>";
+        window.localStorage.setItem("theme", "light");
     }
     else{
         html.classList.add("dark");
         switcher.innerHTML = "<span>Dark</span>";
+        window.localStorage.setItem("theme", "dark");
     }
 };
