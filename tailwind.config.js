@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        main: '#212121'
+        main: '#212121',
+        form: '#0000005c'
       },
       fontFamily: {
         body: ['Gemunu Libre']
